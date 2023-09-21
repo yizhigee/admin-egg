@@ -11,4 +11,6 @@ module.exports = app => {
   router.delete('/delStu', controller.student.delStu);
   router.get('/editStu', controller.student.editStu);
   router.get('/getStu', controller.student.getStu);
+  // 分类
+  router.get('/blog/category',controller.blog.category.getCategory)
 };
