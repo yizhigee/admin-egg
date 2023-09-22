@@ -13,4 +13,5 @@ module.exports = app => {
   router.get('/getStu', controller.student.getStu);
   // 分类
   router.get('/blog/category',controller.blog.category.getCategory)
+  router.post('/blog/addCategory',controller.blog.category.addCategory)
 };
