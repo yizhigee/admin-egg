@@ -14,4 +14,7 @@ module.exports = app => {
   // 分类
   router.get('/blog/category',controller.blog.category.getCategory)
   router.post('/blog/addCategory',controller.blog.category.addCategory)
+
+  // 查询项目列表
+  router.get('/project/list',controller.goView.project.getProject)
 };
