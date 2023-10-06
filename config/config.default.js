@@ -32,8 +32,8 @@ module.exports = appInfo => {
       prot: '3306', // 端口号
       user: 'root', // 用户名
       password: 'gbb0312', // 密码
-      database: 'my_website', // 数据库名
-      // database: 'go_view', // 数据库名
+      // database: 'my_website', // 数据库名
+      database: 'go_view', // 数据库名
     },
   };
 
