@@ -14,20 +14,21 @@ class ProjectService extends Service {
   async getProjectDetail(id) {
     const app = this.app;
     const res = await app.mysql.select("project", { where: { id } });
-    return res;
+    return res[0];
   }
   // 新增/修改项目
   async addProject(params) {
     const app = this.app;
     let content = params
+    let res;
     if(!params.id){
        content = {
         ...params,
-        id: getUUid,
+        id: getUUid(),
       };
-      const res = await app.mysql.insert("project", content);
+      res = await app.mysql.insert("project", content);
     }else {
-      const res = await app.mysql.update("project", content);
+      res = await app.mysql.update("project", content);
     }
     return res;
   }
